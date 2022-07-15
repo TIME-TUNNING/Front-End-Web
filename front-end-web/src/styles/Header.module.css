@@ -46,9 +46,10 @@
     color: #4B77F2;
 }
 
-.mypage_image {
-    width: 40px;
-    height: 40px;
+.mypage {
+    margin-top: 1px;
+    font-size: 18px;
+    color:#4B77F2;
 }
 
 .menu_button {
