@@ -1,0 +1,96 @@
+.navbar {
+    position: relative;
+    top: 15px;
+    height: 76px;
+    width: 400px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.navbar2{
+    height: 3px;
+    width: 50px;
+}
+
+.sort{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    width: 1000px;
+}
+
+.btn {
+    height: 30px;
+} 
+
+
+.ing {
+    background-color: transparent;
+    font-size: 23px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.ing2{
+    background-color: transparent;
+    font-size: 23px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+}
+
+.scheduling {
+    font-size: 13px;
+    font-weight: bold;
+    color: #4B77F2;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-decoration: none;
+}
+
+.end {
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: black;
+}
+
+.scheduling:hover{
+    color: #4B77F2;
+}
+
+.end:hover{
+    color: #4B77F2;
+}
+
+a.button {
+    display: block;
+    position: relative;
+    float: left;
+    height: 40px;
+    width: 100px;
+    padding: 0;
+    margin: 10px 0px 10px 0;
+    font-weight: 700;
+    text-align: center;
+    line-height: 40px;
+    color: #FFF;
+    border-radius: 5px;
+    transition: all 0.2s ;
+    top: 20px;
+    text-decoration: none;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+}
+
+.btnLightBlue {
+    background: #4B77F2;
+}
+
+.btnFade.btnLightBlue:hover {
+    background: #4B77F2;
+}
