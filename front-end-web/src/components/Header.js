@@ -9,8 +9,8 @@ const Header = () => (
         <ul className={styles.menu}>
             <a className={styles.tab} href="/home">홈</a>
             <a className={styles.tab} href="/introduction">타임튜닝이란?</a>
-            <a className={`${styles.tab} ${styles.manage_schedule}`} href="/schedule">일정 관리</a>
-            <a className={styles.tab} href="/mypage">구민지님, 안녕하세요!</a>
+            <a className={styles.tab} href="/schedule">일정 관리</a>
+            <a className={`${styles.tab} ${styles.mypage}`} href="/mypage">이아름님, 안녕하세요!</a>
         </ul>
     </header>
 );

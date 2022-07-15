@@ -1,0 +1,15 @@
+.article {
+    width: auto;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 350px;
+}
+
+.text {
+    padding-top: 10px;
+    color: #D4DFFF;
+    font-size: 50px;
+    font-weight: bold;
+}
