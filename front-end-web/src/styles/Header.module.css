@@ -5,7 +5,7 @@
     background-color:white;
     display: flex;
     justify-content: space-between;
-    box-shadow: 0 -30px 32px 0 black;
+    box-shadow: 0 -5px 30px -20px;
 }
 
 .logo {
