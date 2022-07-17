@@ -1,6 +1,12 @@
+import React, { useState } from 'react';
 import styles from 'styles/AddSchedule.module.css';
+import ColorPicker from 'components/ColorPicker';
 
-const AddSchedule = (props) => (
+function AddSchedule(props) {
+    const [myColor, setMyColor] = useState(null);
+    // const [isBorder, setIsBorder] = useState('none');
+
+    return (
     <div className={styles.addSchedule}>
         <div className={styles.box}>
             <div className={styles.infos}>
@@ -13,10 +19,25 @@ const AddSchedule = (props) => (
                 </div>
                 <div className={styles.color}>
                     <span>색상 선택</span>
+                    <ColorPicker 
+                    myColor={myColor}
+                    // isBorder={isBorder}
+                    onChangeColor={function(color) {
+                        setMyColor(color);
+                        // if (color === myColor) {
+                        //     setIsBorder('3px solid #4B77F2');
+                        // } else {
+                        //     setIsBorder('none');
+                        // }
+                        console.log(myColor);
+                    }}
+                    
+                    />
                 </div>
                 <div className={styles.date}>
                     <span>날짜 선택</span>
                     <input type='text' readOnly/>
+                    
                 </div>
             </div>
             <div className={styles.btns}>
@@ -36,6 +57,9 @@ const AddSchedule = (props) => (
             </div>
         </div>
     </div>
-);
+    )
+};
+
+
 
 export default AddSchedule;

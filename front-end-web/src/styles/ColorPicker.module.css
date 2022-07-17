@@ -1,0 +1,26 @@
+.colorPicker {
+    width: 330px;
+    height: 32px;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+}
+
+.btns {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.addBtn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+    box-shadow: 0 0 20px -12px;
+}
