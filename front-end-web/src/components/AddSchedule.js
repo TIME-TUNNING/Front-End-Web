@@ -4,7 +4,6 @@ import ColorPicker from 'components/ColorPicker';
 
 function AddSchedule(props) {
     const [myColor, setMyColor] = useState(null);
-    // const [isBorder, setIsBorder] = useState('none');
 
     return (
     <div className={styles.addSchedule}>
@@ -21,14 +20,8 @@ function AddSchedule(props) {
                     <span>색상 선택</span>
                     <ColorPicker 
                     myColor={myColor}
-                    // isBorder={isBorder}
                     onChangeColor={function(color) {
                         setMyColor(color);
-                        // if (color === myColor) {
-                        //     setIsBorder('3px solid #4B77F2');
-                        // } else {
-                        //     setIsBorder('none');
-                        // }
                         console.log(myColor);
                     }}
                     
