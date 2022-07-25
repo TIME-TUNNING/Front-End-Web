@@ -21,29 +21,22 @@
     height: 32px;
     border-radius: 50%;
     background-color: white;
+}
+
+.addBtnNotCheck {
+    box-shadow: 0 0 20px -12px black;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #DEDEDE;
+}
+
+.check {
+    border: 5px solid #4B77F2;
+}
+
+.notCheck {
     border: none;
-    box-shadow: 0 0 20px -12px;
-}
-
-/* .chromePicker {
-    position: absolute;
-    top: 200px;
-} */
-
-.color {
-    width: 36px;
-    height: 14px;
-    /* borderRadius: '2px', */
-    
-}
-
-.swatch {
-    padding: 5px;
-    background-color: tomato;
-    /* borderRadius: '1px'; */
-    /* boxShadow: '0 0 0 1px rgba(0,0,0,.1)'; */
-    display: inline-block;
-    cursor: pointer;
 }
 
 .popover {
@@ -53,8 +46,6 @@
 }
 
 .cover {
-    /* width: 0;
-    height: 0; */
     position: fixed;
     top: 0;
     right: 0;
