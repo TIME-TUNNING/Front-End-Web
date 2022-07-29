@@ -9,7 +9,7 @@
 
 .box {
     width: 656px;
-    height: 871px;
+    height: 950px;
     margin-bottom: 20px;
     background-color: white;
     border-radius: 20px;
@@ -99,6 +99,7 @@
 }
 
 .date span {
+    margin-bottom: 10px;
     background-color: transparent;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: bold;
@@ -106,7 +107,7 @@
     color: #3F3F3F
 }
 
-.date input {
+/* .date input {
     margin-top: 12px;
     background-color: transparent;
     width: 556px;
@@ -116,11 +117,11 @@
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: bold;
     font-size: 18px;
-}
+} */
 
-.date input:focus {
+/* .date input:focus {
     outline: 1px solid #4B77F2;
-}
+} */
 
 .btns {
     background-color: transparent;
