@@ -4,7 +4,6 @@ import styles from 'styles/SignUp.module.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { faEyeSlash } from "@fortawesome/free-solid-svg-icons";
-import { isVisible } from '@testing-library/user-event/dist/utils';
 
 function SignUp(props) {
     const [id, setId] = useState("");

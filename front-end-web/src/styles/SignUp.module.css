@@ -39,7 +39,7 @@
     margin-top: 40px;
 }
 
-input {
+.inputs {
     margin-top: 10px;
     background-color: transparent;
     width: 556px;
@@ -78,7 +78,7 @@ input:focus {
     color: #F24B4B;
 }
 
-.inputs {
+.pw_inputs {
     display: flex;
     flex-direction: row-reverse;
 }
