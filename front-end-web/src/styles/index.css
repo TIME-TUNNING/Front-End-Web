@@ -9,5 +9,9 @@
 * {
     margin: 0;
     padding: 0;
-    /* background-color: #f5f5f5; */
+}
+
+.rdrCalendarWrapper {
+    width: 557px;
+    height: 445px;
 }
