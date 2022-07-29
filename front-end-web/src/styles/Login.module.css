@@ -1,0 +1,99 @@
+.login:not(.text) {
+    width: auto;
+    height: 1000px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+
+}
+
+.box:not(.title) {
+    width: 656px;
+    height: 400px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 30px -28px;
+}
+
+.title {
+    background-color: white;
+}
+
+.form{
+    background-color: white;
+}
+
+.id{
+    position: relative;
+    right: 256px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.pw{
+    position: relative;
+    right: 248px;    
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.input {
+    background-color: white;
+    width: 556px;
+    height: 48px;
+    border: none;
+    margin-bottom: 30px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    border: 2px solid #DEDEDE;
+    border-radius: 10px;
+}
+
+input::placeholder {
+    color: #DEDEDE;
+    background-color: white;
+}
+
+.logo{
+    background-color: transparent;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.text {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #858585;
+    text-align: start;
+    flex-direction: row;
+}
+
+.textdiv{
+    margin-top: 30px;
+}
+
+.btn_login {
+    width: 120px;
+    height: 40px;
+    background-color: #4B77F2;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.pwimg{
+    background-color: white;
+    position: absolute;
+    top: 670px;
+    left: 1010px;
+}
