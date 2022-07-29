@@ -1,12 +1,4 @@
-// import React, { useState } from 'react';
 import styles from 'styles/Navbar.module.css';
-
-// const ingFontColor = {
-//     color: props.ingColor,
-//     hover {
-//         color: #4B77F2
-//     }
-// };
 
 const Navbar = (props) => (
     <nav 

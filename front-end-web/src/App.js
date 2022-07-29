@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { Routes, Route, BrowserRouter as Router } from 'react-router-dom'
 import Header from "components/Header";
 import Navbar from "components/Navbar";
 import ArticleIng from "components/ArticleIng";
 import ArticleEnd from "components/ArticleEnd";
 import AddSchedule from "components/AddSchedule";
+import SignUp from "components/SignUp";
 import Footer from "components/Footer";
 import styles from 'styles/App.module.css';
 
@@ -13,8 +15,6 @@ function App() {
   const [ingColor, setIngColor] = useState('#4B77F2');
   const [endColor, setEndColor] = useState('black');
   const [display, setDisplay] = useState('flex');
-
-  let _article = <ArticleIng />
 
   const onChangeScheduleMode = function(mode) {
     setScheduleMode(mode);
@@ -30,6 +30,7 @@ function App() {
     }
   }
 
+  let _article = <ArticleIng />
   if (scheduleMode === 'ing') {
     _article = <ArticleIng />;
   } else if (scheduleMode === 'end') {
@@ -44,23 +45,36 @@ function App() {
     />;
   }
 
+  const _schedule = 
+  <div>
+    <Navbar
+          display={display}
+          modeState={modeState}
+          ingColor={ingColor}
+          endColor={endColor}
+          onChangeScheduleMode={onChangeScheduleMode}
+          onChangeModeState = {function(mode) {
+            setModeState(mode);
+          }}
+          />
+    {_article}
+  </div>
+  
   return (
     <div className="App">
-      <Header />
-      <section className={styles.main_body}>
-        <Navbar
-        display={display}
-        modeState={modeState}
-        ingColor={ingColor}
-        endColor={endColor}
-        onChangeScheduleMode={onChangeScheduleMode}
-        onChangeModeState = {function(mode) {
-          setModeState(mode);
-        }}
-        />
-        {_article}
-      </section>
-      <Footer />
+      <Router>
+        <Header />
+        <section className={styles.main_body}>
+          <Routes>
+            <Route path="/" element=""></Route>
+            <Route path="/introduction" element=""></Route>
+            <Route path="/schedule" element={_schedule}></Route>
+            <Route path="/login" element=""></Route>
+            <Route path="/signup" element={<SignUp />}></Route>
+          </Routes>
+        </section>
+        <Footer />
+      </Router>
     </div>
   );
 }

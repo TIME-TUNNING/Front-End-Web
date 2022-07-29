@@ -1,10 +1,20 @@
-import React, { useState } from 'react';
-import styles from 'styles/AddSchedule.module.css';
+import { useState } from 'react';
+import { DateRange } from 'react-date-range';
+import 'react-date-range/dist/styles.css';
+import 'react-date-range/dist/theme/default.css';
 import ColorPicker from 'components/ColorPicker';
+import styles from 'styles/AddSchedule.module.css';
 
 function AddSchedule(props) {
     const [myColor, setMyColor] = useState(null);
-    // const [isBorder, setIsBorder] = useState('none');
+
+    const [range, setRange] = useState([
+        {
+            startDate: new Date(),
+            endDate: null,
+            key: 'selection'
+        }
+    ]);
 
     return (
     <div className={styles.addSchedule}>
@@ -21,23 +31,26 @@ function AddSchedule(props) {
                     <span>색상 선택</span>
                     <ColorPicker 
                     myColor={myColor}
-                    // isBorder={isBorder}
                     onChangeColor={function(color) {
                         setMyColor(color);
-                        // if (color === myColor) {
-                        //     setIsBorder('3px solid #4B77F2');
-                        // } else {
-                        //     setIsBorder('none');
-                        // }
                         console.log(myColor);
                     }}
-                    
                     />
                 </div>
                 <div className={styles.date}>
                     <span>날짜 선택</span>
-                    <input type='text' readOnly/>
-                    
+                    {/* <input type='text' readOnly/> */}
+                    <div className={styles.date_calendar}>
+                        <DateRange 
+                        editableDateInputs={false}
+                        // dateDisplayFormat={false}
+                        onChange={item => setRange([item.selection])}
+                        moveRangeOnFirstSelection={false}
+                        months={2}
+                        ranges={range}
+                        direction='horizontal'
+                        /> 
+                    </div>
                 </div>
             </div>
             <div className={styles.btns}>
