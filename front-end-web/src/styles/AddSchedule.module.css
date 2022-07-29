@@ -98,13 +98,24 @@
     flex-direction: column;
 }
 
-.date span {
+.date_text {
     margin-bottom: 10px;
     background-color: transparent;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: bold;
     font-size: 18px;
     color: #3F3F3F
+}
+
+input {
+    border-radius: 10px;
+    border: 1px solid #DEDEDE;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+}
+
+span {
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 /* .date input {
@@ -119,9 +130,9 @@
     font-size: 18px;
 } */
 
-/* .date input:focus {
-    outline: 1px solid #4B77F2;
-} */
+.date input:focus {
+    outline: none;
+}
 
 .btns {
     background-color: transparent;
