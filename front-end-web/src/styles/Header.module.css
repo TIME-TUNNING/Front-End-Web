@@ -46,13 +46,26 @@
     color: #4B77F2;
 }
 
-.mypage {
+.my_menu {
     margin-top: 1px;
+    width: 160px;
+    height: 30px;
+    text-align: end;
+}
+
+.smallTab {
     font-size: 18px;
+    font-weight: bold;
     color:#4B77F2;
 }
 
-.menu_button {
+.smallBar {
+    display: inline-block;
+    padding: 0 10px;
+    content: ' \007C';
+}
+
+/* .menu_button {
     width: 50px;
     height: 50px;
     background-color: transparent;
@@ -69,4 +82,4 @@
 
 .menu_button:hover {
     filter: opacity(0.5) drop-shadow(0 0 0 #4B77F2);
-}
+} */
