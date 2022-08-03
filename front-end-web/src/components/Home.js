@@ -2,12 +2,12 @@ import styles from 'styles/Home.module.css';
 import Frame from 'icons/Frame.png'
 import Frametop from 'icons/Frametop.png'
 import Vector from 'icons/Vector.png'
-function Home(props) {
 
-    return(
+function Home(props) {
+    return (
     <div>
         <div className={styles.vectordiv}>
-            <img className={styles.Vector} src={Vector}/>
+            <img className={styles.Vector} src={Vector} alt='img1'/>
         </div>
         <div className={styles.homediv}>
             <span className={styles.timetuning}>
@@ -19,18 +19,13 @@ function Home(props) {
             </span>
         </div> 
         <div className={styles.frametopdiv}>
-            <img className={styles.Frametop} src={Frametop}/>
+            <img className={styles.Frametop} src={Frametop} alt='img2'/>
         </div>
         <div className={styles.framediv}>
-            <img className={styles.Frame} src={Frame}/>
+            <img className={styles.Frame} src={Frame} alt='img3'/>
         </div>
-        
-        
     </div>
-    
-
     )
 };
-    
 
 export default Home;

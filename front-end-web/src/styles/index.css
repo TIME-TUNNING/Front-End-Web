@@ -15,3 +15,22 @@
     width: 557px;
     height: 445px;
 }
+
+.rdrDateDisplayWrapper {
+    background-color: transparent;
+}
+
+.rdrDateDisplayItem {
+    box-shadow: none;
+    border: 1px solid #DEDEDE;
+    border-radius: 10px;
+
+}
+
+.rdrMonthAndYearWrapper {
+    padding: 0;
+}
+
+.rdrMonthName, .rdrWeekDay, .rdrDayNumber {
+    font-family: 'Noto Sans KR', sans-serif;
+}

@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { Routes, Route, BrowserRouter as Router } from 'react-router-dom'
 import Header from "components/Header";
+import Home from "components/Home";
 import Navbar from "components/Navbar";
 import ArticleIng from "components/ArticleIng";
 import ArticleEnd from "components/ArticleEnd";
 import AddSchedule from "components/AddSchedule";
+import Login from "components/Login";
 import SignUp from "components/SignUp";
 import Footer from "components/Footer";
 import styles from 'styles/App.module.css';
@@ -66,10 +68,10 @@ function App() {
         <Header />
         <section className={styles.main_body}>
           <Routes>
-            <Route path="/" element=""></Route>
+            <Route path="/" element={<Home />}></Route>
             <Route path="/introduction" element=""></Route>
             <Route path="/schedule" element={_schedule}></Route>
-            <Route path="/login" element=""></Route>
+            <Route path="/login" element={<Login />}></Route>
             <Route path="/signup" element={<SignUp />}></Route>
           </Routes>
         </section>

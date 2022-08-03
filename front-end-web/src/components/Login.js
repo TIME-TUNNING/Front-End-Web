@@ -2,10 +2,6 @@ import styles from 'styles/Login.module.css'
 import logoimg from 'icons/logoimg.png'
 import pw from 'icons/pw.png'
 
-
-
-
-
 function Login(props) {
     // const [hidePassword, setHidePassword] = useState(true);
 
@@ -15,7 +11,7 @@ function Login(props) {
     
     return (
         <div className={styles.login}>
-            <img className={styles.logo} src={logoimg}/>
+            <img className={styles.logo} src={logoimg} alt='img'/>
             <div className={styles.box}>
                 <span className={`${styles.title} ${styles.id}`}>
                     아이디
@@ -32,7 +28,7 @@ function Login(props) {
                     <img 
                     className={styles.pwimg} 
                     src={pw}
-                    
+                    alt='img'
                     />
                 </form> 
                 <button
@@ -44,16 +40,15 @@ function Login(props) {
                 >로그인</button>
             </div>
             <div className={styles.textdiv}>
-                <a className={styles.text}>
+                <span className={styles.text}>
                     아이디/비밀번호를 잊으셨나요?
-                </a>
+                </span>
                 <span className={styles.text}> | </span>
-                <a className={styles.text}>
+                <span className={styles.text}>
                     회원가입
-                </a>
+                </span>
             </div>
         </div>
-        
     )
 };
 

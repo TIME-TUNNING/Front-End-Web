@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { DateRange } from 'react-date-range';
+import ko from 'date-fns/locale/ko';
+import moment from 'moment';
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 import ColorPicker from 'components/ColorPicker';
@@ -8,13 +10,16 @@ import styles from 'styles/AddSchedule.module.css';
 function AddSchedule(props) {
     const [myColor, setMyColor] = useState(null);
 
+    
     const [range, setRange] = useState([
         {
             startDate: new Date(),
-            endDate: null,
+            endDate: new Date(),
             key: 'selection'
         }
     ]);
+
+    const today = moment().toDate();
 
     return (
     <div className={styles.addSchedule}>
@@ -38,17 +43,19 @@ function AddSchedule(props) {
                     />
                 </div>
                 <div className={styles.date}>
-                    <span>날짜 선택</span>
-                    {/* <input type='text' readOnly/> */}
+                    <span className={styles.date_text}>날짜 선택</span>
                     <div className={styles.date_calendar}>
                         <DateRange 
+                        locale={ko}
                         editableDateInputs={false}
-                        // dateDisplayFormat={false}
+                        minDate={today}
                         onChange={item => setRange([item.selection])}
                         moveRangeOnFirstSelection={false}
                         months={2}
                         ranges={range}
+                        rangeColors={['#4B77F2']}
                         direction='horizontal'
+                        dateDisplayFormat={'yyyy년 MM월 dd일'}
                         /> 
                     </div>
                 </div>
@@ -65,6 +72,7 @@ function AddSchedule(props) {
                     e.preventDefault();
                     props.onChangeScheduleMode('ing');
                     props.onChangeModeState('조율 진행중');
+                    console.log(range);
                 }}
                 >취소</button>
             </div>

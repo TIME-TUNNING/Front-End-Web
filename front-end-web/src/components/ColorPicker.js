@@ -87,7 +87,11 @@ function ColorPicker (props) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default ColorPicker;
 =======
 export default ColorPicker;
 >>>>>>> aec558e260ee85dd37463af737101144957f3b19
+=======
+export default ColorPicker;
+>>>>>>> f8d88375d8435a6c02387f7a4379d967b03049d9

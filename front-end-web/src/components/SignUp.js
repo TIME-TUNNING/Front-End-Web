@@ -4,7 +4,6 @@ import styles from 'styles/SignUp.module.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { faEyeSlash } from "@fortawesome/free-solid-svg-icons";
-import { isVisible } from '@testing-library/user-event/dist/utils';
 
 function SignUp(props) {
     const [id, setId] = useState("");
@@ -87,9 +86,9 @@ function SignUp(props) {
                     <div className={styles.section}>
                         <div className={styles.texts}>
                             <span className={styles.text_title}>아이디</span>
-                            
                         </div>
                         <input
+                        className={styles.inputs}
                         type='text' 
                         placeholder='아이디를 입력하세요'
                         onChange = {(e) => {
@@ -102,6 +101,7 @@ function SignUp(props) {
                             <span className={styles.text_title}>이름</span>
                         </div>
                         <input 
+                        className={styles.inputs}
                         type='text' 
                         placeholder='본인의 성함을 입력하세요'
                         onChange = {(e) => {
@@ -113,8 +113,9 @@ function SignUp(props) {
                         <div className={styles.texts}>
                             <span className={styles.text_title}>비밀번호</span>
                         </div>
-                        <div className={styles.inputs}>
+                        <div className={styles.pw_inputs}>
                             <input 
+                            className={styles.inputs}
                             type={isHide ? 'password' : 'text'}
                             placeholder='비밀번호를 입력하세요'
                             onChange = {(e) => {
@@ -123,7 +124,6 @@ function SignUp(props) {
                             />
                             {_eye}
                         </div>
-                        
                     </div>
                     <div className={styles.section}>
                         <div className={styles.texts}>
@@ -133,8 +133,9 @@ function SignUp(props) {
                             style={{display: isVisible[3] ? 'inline' : 'none'}}
                             >{pwCheckReport}</span>
                         </div>
-                        <div className={styles.inputs}>
+                        <div className={styles.pw_inputs}>
                             <input 
+                            className={styles.inputs}
                             type={isHide ? 'password' : 'text'}
                             placeholder='비밀번호를 다시 입력하세요'
                             onChange = {(e) => {
