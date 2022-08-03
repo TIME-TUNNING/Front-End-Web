@@ -114,29 +114,12 @@ input {
     font-size: 16px;
 }
 
-span {
-    font-family: 'Noto Sans KR', sans-serif;
-}
-
-/* .date input {
-    margin-top: 12px;
-    background-color: transparent;
-    width: 556px;
-    height: 48px;
-    border-radius: 10px;
-    border: 1px solid #DEDEDE;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: bold;
-    font-size: 18px;
-} */
-
 .date input:focus {
     outline: none;
 }
 
 .btns {
     background-color: transparent;
-    margin-top: 12px;
 }
 
 .btn_ok {
