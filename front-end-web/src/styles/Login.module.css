@@ -23,6 +23,9 @@
 
 .title {
     background-color: white;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .form{
@@ -46,19 +49,21 @@
 .input {
     background-color: white;
     width: 556px;
-    height: 48px;
+    height: 60px;
     border: none;
     margin-bottom: 30px;
+    padding-left: 10px;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: bold;
-    font-size: 20px;
-    border: 2px solid #DEDEDE;
+    font-size: 18px;
+    border: 1px solid #DEDEDE;
     border-radius: 10px;
 }
 
 input::placeholder {
     color: #DEDEDE;
     background-color: white;
+    font-weight: normal;
 }
 
 .logo{
@@ -93,12 +98,12 @@ input::placeholder {
 
 .eye {
     position: absolute;
-    margin-top: -68px;
-    margin-left: 530px;
+    margin-top: -72px;
+    margin-left: 540px;
 }
 
 .eyeSlash {
     position: absolute;
-    margin-top: -68px;
-    margin-left: 530px;
+    margin-top: -72px;
+    margin-left: 540px;
 }

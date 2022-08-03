@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from 'styles/Login.module.css'
 import logoimg from 'icons/logoimg.png'
-import pw from 'icons/pw.png'
+// import pw from 'icons/pw.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { faEyeSlash } from "@fortawesome/free-solid-svg-icons";
@@ -57,7 +57,11 @@ function Login(props) {
                     아이디
                 </span>
                 <form className={styles.form}>
-                    <input className={styles.input} type="text" name = "id" placeholder="  아이디를 입력하세요" />
+                    <input 
+                    className={styles.input} 
+                    type="text" 
+                    name = "id" 
+                    placeholder="아이디를 입력하세요" />
                 </form>
                 <span className={`${styles.title} ${styles.pw}`}>
                     비밀번호
@@ -67,7 +71,7 @@ function Login(props) {
                     className={styles.input} 
                     type={isHide ? 'password' : 'text'}
                     name = "pw" 
-                    placeholder="  비밀번호를 입력하세요" 
+                    placeholder="비밀번호를 입력하세요" 
                     onClick = {() => {
                         onChangeDisplay(3);
                     }}
