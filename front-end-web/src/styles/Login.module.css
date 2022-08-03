@@ -91,9 +91,14 @@ input::placeholder {
     cursor: pointer;
 }
 
-.pwimg{
-    background-color: white;
+.eye {
     position: absolute;
-    top: 670px;
-    left: 1010px;
+    margin-top: -68px;
+    margin-left: 530px;
+}
+
+.eyeSlash {
+    position: absolute;
+    margin-top: -68px;
+    margin-left: 530px;
 }
