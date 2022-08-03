@@ -10,6 +10,7 @@ import styles from 'styles/AddSchedule.module.css';
 function AddSchedule(props) {
     const [myColor, setMyColor] = useState(null);
 
+    
     const [range, setRange] = useState([
         {
             startDate: new Date(),
@@ -54,7 +55,7 @@ function AddSchedule(props) {
                         ranges={range}
                         rangeColors={['#4B77F2']}
                         direction='horizontal'
-                        dateDisplayFormat={'yyyy년 mm월 dd일'}
+                        dateDisplayFormat={'yyyy년 MM월 dd일'}
                         /> 
                     </div>
                 </div>
