@@ -32,9 +32,14 @@ function App() {
     }
   }
 
-  let _article = <ArticleIng />
+  let id_max = 0;
+  const [schedule, setSchedule] = useState([
+    {id:0, title:'동아리 회의', desc:'이번주 동아리 전체 회의날 정하기'}
+  ])
+
+  let _article;
   if (scheduleMode === 'ing') {
-    _article = <ArticleIng />;
+    _article = <ArticleIng schedule={schedule}/>;
   } else if (scheduleMode === 'end') {
     _article = <ArticleEnd />;
   } else if (scheduleMode === 'add') {
@@ -43,6 +48,11 @@ function App() {
     onChangeScheduleMode={onChangeScheduleMode}
     onChangeModeState = {function(mode) {
       setModeState(mode);
+    }}
+    onAddSch = { (_title, _desc) => {
+      id_max++;
+      setSchedule(schedule.concat({id:id_max, title:_title, desc:_desc}));
+      // console.log(schedule);
     }}
     />;
   }
@@ -61,7 +71,7 @@ function App() {
           />
     {_article}
   </div>
-  
+
   return (
     <div className="App">
       <Router>

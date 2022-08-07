@@ -1,6 +1,9 @@
 .article {
     width: auto;
-    height: 500px;
+    height: 1000px;
+}
+
+.message {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -13,4 +16,11 @@
     font-size: 50px;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: bold;
+}
+
+.scheduleBlock {
+    width: 1000px;
+    height: 100px;
+    background-color: teal;
+    margin-top: 10px;
 }
