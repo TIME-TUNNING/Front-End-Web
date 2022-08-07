@@ -5,11 +5,13 @@ import moment from 'moment';
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 import ColorPicker from 'components/ColorPicker';
+// import { Link } from 'react-router-dom';
 import styles from 'styles/AddSchedule.module.css';
 
 function AddSchedule(props) {
-    const [myColor, setMyColor] = useState(null);
-
+    const [myTitle, setMyTitle] = useState('');
+    const [myDesc, setMyDesc] = useState('');
+    const [myColor, setMyColor] = useState('');
     
     const [range, setRange] = useState([
         {
@@ -26,11 +28,22 @@ function AddSchedule(props) {
         <div className={styles.box}>
             <div className={styles.infos}>
                 <div className={styles.title}>
-                    <input type='text' placeholder='일정 제목'/>
+                    <input 
+                    type='text' 
+                    placeholder='일정 제목'
+                    onChange={ (e) => {
+                        setMyTitle(e.target.value);
+                    }}
+                    />
                 </div>
                 <div className={styles.desc}>
                     <span>일정 설명</span>
-                    <input type='text'/>
+                    <input 
+                    type='text'
+                    onChange={ (e) => {
+                        setMyDesc(e.target.value);
+                    }}
+                    />
                 </div>
                 <div className={styles.color}>
                     <span>색상 선택</span>
@@ -64,6 +77,12 @@ function AddSchedule(props) {
                 <button
                 className={styles.btn_ok}
                 type='submit'
+                onClick = { () => {
+                    props.onAddSch(myTitle, myDesc);
+                    props.onChangeScheduleMode('ing');
+                    props.onChangeModeState('조율 진행중');
+                    // console.log('스케쥴');
+                }}
                 >확인</button>
                 <button
                 className={styles.btn_cancel}
@@ -72,7 +91,7 @@ function AddSchedule(props) {
                     e.preventDefault();
                     props.onChangeScheduleMode('ing');
                     props.onChangeModeState('조율 진행중');
-                    console.log(range);
+                    // console.log(range);
                 }}
                 >취소</button>
             </div>
