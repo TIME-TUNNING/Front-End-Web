@@ -7,7 +7,7 @@ const ScheduleBlock = (props) => {
         marginTop: '30px',
         backgroundColor: 'teal'
     }
-    console.log(props.schedule.title);
+    // console.log(props.schedule.title);
     
     return (
         <div 

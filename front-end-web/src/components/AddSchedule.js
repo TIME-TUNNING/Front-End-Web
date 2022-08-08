@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { DateRange } from 'react-date-range';
 import ko from 'date-fns/locale/ko';
 import moment from 'moment';
@@ -22,6 +23,8 @@ function AddSchedule(props) {
     ]);
 
     const today = moment().toDate();
+
+    const navigate = useNavigate();
 
     return (
     <div className={styles.addSchedule}>
@@ -79,18 +82,18 @@ function AddSchedule(props) {
                 type='submit'
                 onClick = { () => {
                     props.onAddSch(myTitle, myDesc);
-                    props.onChangeScheduleMode('ing');
-                    props.onChangeModeState('조율 진행중');
-                    // console.log('스케쥴');
+                    navigate(-1);
+                    // props.history.goBack();
                 }}
                 >확인</button>
                 <button
                 className={styles.btn_cancel}
                 type='button'
                 onClick = { (e) => {
-                    e.preventDefault();
-                    props.onChangeScheduleMode('ing');
-                    props.onChangeModeState('조율 진행중');
+                    navigate(-1);
+                    // props.history.goBack();
+                    // props.onChangeScheduleMode('ing');
+                    // props.onChangeModeState('조율 진행중');
                     // console.log(range);
                 }}
                 >취소</button>

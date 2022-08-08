@@ -10,7 +10,7 @@ const Header = () => (
         <ul className={styles.menu}>
             <Link to="/" className={styles.tab}>홈</Link>
             <Link to="/introduction" className={styles.tab}>타임튜닝이란</Link>
-            <Link to="/schedule" className={styles.tab}>일정 관리</Link>
+            <Link to="/mySchedule/ing" className={styles.tab}>일정 관리</Link>
             <div className={styles.my_menu}>
                 <Link to="/login" className={`${styles.tab} ${styles.smallTab}`}>로그인</Link>
                 <span className={`${styles.smallBar} ${styles.smallTab}`}>|</span>
