@@ -8,6 +8,7 @@ import ArticleEnd from "components/ArticleEnd";
 import AddSchedule from "components/AddSchedule";
 import Login from "components/Login";
 import SignUp from "components/SignUp";
+import MySchedule from "components/MySchedule"
 import Footer from "components/Footer";
 import styles from 'styles/App.module.css';
 
@@ -57,7 +58,7 @@ function App() {
     />;
   }
 
-  const _schedule = 
+  const _manage = 
   <div>
     <Navbar
           display={display}
@@ -80,9 +81,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/introduction" element=""></Route>
-            <Route path="/schedule" element={_schedule}></Route>
+            <Route path="/manage" element={_manage}></Route>
             <Route path="/login" element={<Login />}></Route>
             <Route path="/signup" element={<SignUp />}></Route>
+            <Route path="/mySchedule/:id" element={<MySchedule schedule={schedule}/>}></Route>
           </Routes>
         </section>
         <Footer />

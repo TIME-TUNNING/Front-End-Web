@@ -81,7 +81,7 @@ function AddSchedule(props) {
                     props.onAddSch(myTitle, myDesc);
                     props.onChangeScheduleMode('ing');
                     props.onChangeModeState('조율 진행중');
-                    // console.log('스케쥴');
+                    // console.log('스케쥴 추가');
                 }}
                 >확인</button>
                 <button

@@ -1,0 +1,40 @@
+.mySchedule {
+    width: auto;
+    height: 1000px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 656px;
+    height: 950px;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 30px -28px;
+}
+
+.infos {
+    margin-top: 50px;
+    background-color: transparent;
+}
+
+.title {
+    width: 550px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.desc {
+    width: 550px;
+    margin-top: 40px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}

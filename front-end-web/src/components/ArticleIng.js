@@ -1,13 +1,22 @@
 // import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import ScheduleBlock from "components/ScheduleBlock";
 import styles from 'styles/Article.module.css';
 
 const ArticleIng = (props) => {
-    console.log(props);
+    console.log(props.schedule[0].id);
     const contents = props.schedule.map(sch => (
-        <ScheduleBlock
-        key={Number(sch.id)}
-        schedule={sch} />
+        <Link to={{
+            pathname: `/mySchedule/${sch.id}`,
+            key: sch.id,
+            title: sch.title,
+            desc: sch.desc
+        }}>
+            <ScheduleBlock
+            key={Number(sch.id)}
+            schedule={sch} 
+            />
+        </Link>
     ));
 
     return (
