@@ -29,20 +29,21 @@
     position: relative;
     width: 330px;
     height: 300px;
-    left: 20px;
+    left: -550px;
     bottom: -3px;
 }
 .Frametop{
     position: relative;
     width: 100px;
     height: 100px;
-    left: 350px;
+    left: -230px;
     bottom: 38px;
     /* align-content: flex-end; */
 }
 .Vector{
     position: relative;
     width: 150px;
+    left: 570px;
     background-color: transparent;
 }
 
