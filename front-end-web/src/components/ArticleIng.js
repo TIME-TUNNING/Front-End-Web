@@ -8,7 +8,7 @@ const ArticleIng = (props) => {
     const contents = props.schedule.map(sch => (
         <div key={Number(sch.id)}>
             <Link to={{
-                pathname: `/mySchedule/${sch.id}`,
+                pathname: `/mySchedule/ing/${sch.id}`,
                 title: sch.title,
                 desc: sch.desc
             }}>

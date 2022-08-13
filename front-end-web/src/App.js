@@ -57,7 +57,7 @@ function App() {
             <Route path="/login" element={<Login />}></Route>
             <Route path="/signup" element={<SignUp />}></Route>
             <Route path="/addSchedule" element={_addSchedule}></Route>
-            <Route path="/mySchedule/:sch_id" element={<MySchedule schedule={schedule}/>}></Route>
+            <Route path="/mySchedule/ing/:sch_id" element={<MySchedule schedule={schedule}/>}></Route>
           </Routes>
         </section>
         <Footer />
