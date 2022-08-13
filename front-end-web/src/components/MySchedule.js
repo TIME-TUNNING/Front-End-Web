@@ -1,3 +1,4 @@
+import { useParams } from 'react-router-dom'
 import styles from 'styles/MySchedule.module.css';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
@@ -20,17 +21,19 @@ const settings = {
 // };
 
 const MySchedule = (props) => {
-    // console.log(props.schedule.id);
+    let { sch_id } = useParams();
+    // console.log(props.schedule[sch_id].id);
+    // console.log(sch_id);
     
     return (
         <div className={styles.mySchedule}>
             <div className={styles.box}>
                 <div className={styles.infos}>
                     <div className={styles.title}>
-                        {props.schedule[0].title}
+                        {props.schedule[sch_id].title}
                     </div>
                     <div className={styles.desc}>
-                        {props.schedule[0].desc}
+                        {props.schedule[sch_id].desc}
                     </div>
                     <div className={styles.slide}>
                         <Slider {...settings}>

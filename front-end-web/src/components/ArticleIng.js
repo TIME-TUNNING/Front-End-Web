@@ -6,17 +6,18 @@ import styles from 'styles/Article.module.css';
 const ArticleIng = (props) => {
     // console.log(props.schedule[0].id);
     const contents = props.schedule.map(sch => (
-        <Link to={{
-            pathname: `/mySchedule/${sch.id}`,
-            key: sch.id,
-            title: sch.title,
-            desc: sch.desc
-        }}>
-            <ScheduleBlock
-            key={Number(sch.id)}
-            schedule={sch} 
-            />
-        </Link>
+        <div key={Number(sch.id)}>
+            <Link to={{
+                pathname: `/mySchedule/${sch.id}`,
+                title: sch.title,
+                desc: sch.desc
+            }}>
+                <ScheduleBlock
+                schedule={sch} 
+                />
+            </Link>
+        </div>
+        
     ));
 
     return (
