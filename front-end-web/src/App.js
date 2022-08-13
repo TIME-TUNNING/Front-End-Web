@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Routes, Route, BrowserRouter as Router} from 'react-router-dom'
+import { Routes, Route, BrowserRouter as Router } from 'react-router-dom'
 import Header from "components/Header";
 import Home from "components/Home";
 import ArticleIng from "components/ArticleIng";
@@ -13,10 +13,9 @@ import styles from 'styles/App.module.css';
 
 function App() {
   const [modeState, setModeState] = useState('조율 진행중');
-
-  let id_max = 0;
+  const [idMax, setIdMax] = useState(1); // 기본으로 생성해놓은 '동아리 회의' 없애면 다시 0부터 시작하게 수정해야함
   const [schedule, setSchedule] = useState([
-    {id:0, title:'동아리 회의', desc:'이번주 동아리 전체 회의날 정하기'}
+    {id:0, title:'동아리 회의', desc:'이번주 동아리 전체 회의날 정하기', color:'teal', date:''}
   ])
 
   const _addSchedule = 
@@ -24,9 +23,9 @@ function App() {
     onChangeModeState = {function(mode) {
       setModeState(mode);
     }}
-    onAddSch = { (_title, _desc) => {
-      id_max++;
-      setSchedule(schedule.concat({id:id_max, title:_title, desc:_desc}));
+    onAddSch = { (_title, _desc, _color, _dateRange) => {
+      setIdMax(idMax + 1);
+      setSchedule(schedule.concat({id:idMax, title:_title, desc:_desc, color:_color, date:_dateRange}));
     }}/>;
 
   const _articleIng = 
@@ -58,7 +57,7 @@ function App() {
             <Route path="/login" element={<Login />}></Route>
             <Route path="/signup" element={<SignUp />}></Route>
             <Route path="/addSchedule" element={_addSchedule}></Route>
-            <Route path="/mySchedule/:id" element={<MySchedule schedule={schedule}/>}></Route>
+            <Route path="/mySchedule/:sch_id" element={<MySchedule schedule={schedule}/>}></Route>
           </Routes>
         </section>
         <Footer />

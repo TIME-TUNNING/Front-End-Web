@@ -1,18 +1,19 @@
 // import { useState } from 'react';
+import styles from 'styles/ScheduleBlock.module.css'
 
 const ScheduleBlock = (props) => {
-    const styles = {
-        width: '1000px',
-        height: '100px',
-        marginTop: '30px',
-        backgroundColor: 'teal'
-    }
-    // console.log(props.schedule.title);
-    
     return (
         <div 
-        style={styles}>
-            {props.schedule.title}
+        className={styles.scheduleBlock}
+        style={{borderLeft: `9px solid ${props.schedule.color}`}}
+        >
+            <div 
+            className={styles.color}
+            style={{backgroundColor: `${props.schedule.color}`}}
+            ></div>
+            <span className={styles.title}>
+                {props.schedule.title}
+            </span>
         </div>
     )
 }

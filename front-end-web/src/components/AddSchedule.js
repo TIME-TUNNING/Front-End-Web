@@ -14,13 +14,14 @@ function AddSchedule(props) {
     const [myDesc, setMyDesc] = useState('');
     const [myColor, setMyColor] = useState('');
     
-    const [range, setRange] = useState([
+    const [dateRange, setDateRange] = useState([
         {
             startDate: new Date(),
             endDate: new Date(),
             key: 'selection'
         }
     ]);
+    // console.log(dateRange);
 
     const today = moment().toDate();
 
@@ -54,7 +55,7 @@ function AddSchedule(props) {
                     myColor={myColor}
                     onChangeColor={function(color) {
                         setMyColor(color);
-                        console.log(myColor);
+                        // console.log(myColor);
                     }}
                     />
                 </div>
@@ -65,10 +66,10 @@ function AddSchedule(props) {
                         locale={ko}
                         editableDateInputs={false}
                         minDate={today}
-                        onChange={item => setRange([item.selection])}
+                        onChange={item => setDateRange([item.selection])}
                         moveRangeOnFirstSelection={false}
                         months={2}
-                        ranges={range}
+                        ranges={dateRange}
                         rangeColors={['#4B77F2']}
                         direction='horizontal'
                         dateDisplayFormat={'yyyy년 MM월 dd일'}
@@ -81,7 +82,7 @@ function AddSchedule(props) {
                 className={styles.btn_ok}
                 type='submit'
                 onClick = { () => {
-                    props.onAddSch(myTitle, myDesc);
+                    props.onAddSch(myTitle, myDesc, myColor, dateRange);
                     navigate(-1);
                     // props.history.goBack();
                 }}
