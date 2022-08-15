@@ -4,7 +4,8 @@ import ScheduleBlock from "components/ScheduleBlock";
 import styles from 'styles/Article.module.css';
 
 const ArticleIng = (props) => {
-    // console.log(props.schedule[0].id);
+    console.log(props.idMax);
+
     const contents = props.schedule.map(sch => (
         <div key={Number(sch.id)}>
             <Link to={{
@@ -17,7 +18,6 @@ const ArticleIng = (props) => {
                 />
             </Link>
         </div>
-        
     ));
 
     return (
@@ -60,7 +60,7 @@ const ArticleIng = (props) => {
                 </div>
                 <div 
                 className={styles.message}
-                // style={{display: id_max > -1 ? 'block' : 'none'}}
+                style={{display: props.idMax <= 0 ? '' : 'none'}}
                 >
                     <span className={styles.text}>
                         아직 조율중인

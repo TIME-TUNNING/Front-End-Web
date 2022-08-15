@@ -1,10 +1,11 @@
-import React, { useState } from "react";
-import styles from 'styles/Login.module.css'
+import { useState } from "react";
+import { Link } from 'react-router-dom';
 import logoimg from 'icons/logoimg.png'
 // import pw from 'icons/pw.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import styles from 'styles/Login.module.css'
 
 function Login(props) {
     // const [hidePassword, setHidePassword] = useState(true);
@@ -61,7 +62,8 @@ function Login(props) {
                     className={styles.input} 
                     type="text" 
                     name = "id" 
-                    placeholder="아이디를 입력하세요" />
+                    placeholder="아이디를 입력하세요"
+                    spellCheck='false' />
                 </form>
                 <span className={`${styles.title} ${styles.pw}`}>
                     비밀번호
@@ -72,6 +74,7 @@ function Login(props) {
                     type={isHide ? 'password' : 'text'}
                     name = "pw" 
                     placeholder="비밀번호를 입력하세요" 
+                    spellCheck='false'
                     onClick = {() => {
                         onChangeDisplay(3);
                     }}
@@ -91,9 +94,7 @@ function Login(props) {
                     아이디/비밀번호를 잊으셨나요?
                 </span>
                 <span className={styles.text}> | </span>
-                <span className={styles.text}>
-                    회원가입
-                </span>
+                <Link to="/signup" className={styles.text}>회원가입</Link>
             </div>
         </div>
     )
