@@ -91,6 +91,7 @@ function SignUp(props) {
                         className={styles.inputs}
                         type='text' 
                         placeholder='아이디를 입력하세요'
+                        spellCheck='false'
                         onChange = {(e) => {
                             setId(e.target.value);
                         }}
@@ -104,6 +105,7 @@ function SignUp(props) {
                         className={styles.inputs}
                         type='text' 
                         placeholder='본인의 성함을 입력하세요'
+                        spellCheck='false'
                         onChange = {(e) => {
                             setName(e.target.value);
                         }}
@@ -118,6 +120,7 @@ function SignUp(props) {
                             className={styles.inputs}
                             type={isHide ? 'password' : 'text'}
                             placeholder='비밀번호를 입력하세요'
+                            spellCheck='false'
                             onChange = {(e) => {
                                 setPassword(e.target.value);
                             }}
@@ -138,6 +141,7 @@ function SignUp(props) {
                             className={styles.inputs}
                             type={isHide ? 'password' : 'text'}
                             placeholder='비밀번호를 다시 입력하세요'
+                            spellCheck='false'
                             onChange = {(e) => {
                                 setPwCheck(e.target.value);
                             }}

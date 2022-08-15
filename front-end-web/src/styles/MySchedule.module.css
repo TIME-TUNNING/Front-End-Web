@@ -39,6 +39,8 @@
     font-weight: bold;
 }
 
+/* ----slide---- */
+
 .slide {
     width: 550px;
     margin-top:  70px;
@@ -73,8 +75,9 @@
 
 .tablebox {
     margin-top: 40px;
-    width: 550px;
-    height: 50px;
+    margin-left: 3px;
+    width: 563px;
+    height: 60px;
     background-color: white;
     border-radius: 10px;
     border-style: solid;
@@ -84,9 +87,122 @@
 
 .time {
     text-align: center;
-    word-spacing: 40px;
+    word-spacing: 42px;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 10px;
     color: #858585;
     font-weight: bold;
+}
+
+/* ----invite---- */
+
+.invite {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.texts {
+    display: inline-block;
+    margin: 10px 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    color: #3F3F3F;
+    font-weight: bold;
+}
+
+.flex {
+    display: flex;
+}
+
+.invite_input {
+    margin-bottom: 20px;
+    padding-left: 15px;
+    width: 552px;
+    height: 57px;
+    border-radius: 10px;
+    border: 1px solid #DEDEDE;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.invite_input::placeholder {
+    color: #DEDEDE;
+}
+
+.btn_position {
+    width: 58px;
+    height: 27px;
+    position: absolute;
+    margin-top: 16px;
+    margin-left: 510px;
+    background-color: white;
+}
+
+.btn_search {
+    margin-left: 10px;
+    color: #4B77F2;
+    border: none;
+    background-color: white;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.memberList {
+    width: 570px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.member {
+    margin-bottom: 10px;
+    width: 176px;
+    height: 48px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 30px -22px black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.circle {
+    width: 32px;
+    height: 32px;
+    background-color: #DEDEDE;
+    border-radius: 50%;
+}
+
+.member_name {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    color: #3F3F3F;
+}
+
+.btn_delete {
+    margin-top: 5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* ----btns---- */
+
+.btns {
+    margin-top: 10px;
+}
+
+.btn_submit {
+    width: 216px;
+    height: 48px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    color: white;
+    border: none;
+    background-color: #4B77F2;
+    border-radius: 10px;
 }

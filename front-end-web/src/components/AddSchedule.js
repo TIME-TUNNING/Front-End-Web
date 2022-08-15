@@ -6,13 +6,12 @@ import moment from 'moment';
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 import ColorPicker from 'components/ColorPicker';
-// import { Link } from 'react-router-dom';
 import styles from 'styles/AddSchedule.module.css';
 
 function AddSchedule(props) {
     const [myTitle, setMyTitle] = useState('');
     const [myDesc, setMyDesc] = useState('');
-    const [myColor, setMyColor] = useState('');
+    const [myColor, setMyColor] = useState('#99C0F6');
     
     const [dateRange, setDateRange] = useState([
         {
@@ -33,8 +32,10 @@ function AddSchedule(props) {
             <div className={styles.infos}>
                 <div className={styles.title}>
                     <input 
+                    className={styles.inputs}
                     type='text' 
                     placeholder='일정 제목'
+                    spellCheck='false'
                     onChange={ (e) => {
                         setMyTitle(e.target.value);
                     }}
@@ -44,6 +45,7 @@ function AddSchedule(props) {
                     <span>일정 설명</span>
                     <input 
                     type='text'
+                    spellCheck='false'
                     onChange={ (e) => {
                         setMyDesc(e.target.value);
                     }}

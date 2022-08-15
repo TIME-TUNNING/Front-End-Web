@@ -5,7 +5,7 @@ import styles from 'styles/ColorPicker.module.css';
 
 function ColorPicker (props) {
     const [isSelected, setIsSelected] = useState(
-        [false, false, false, false, false, false, false]
+        [false, true, false, false, false, false, false]
     );
     const handleSelect = (index) => {
         let newArray = [...isSelected];

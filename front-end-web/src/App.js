@@ -9,7 +9,9 @@ import Login from "components/Login";
 import SignUp from "components/SignUp";
 import MySchedule from "components/MySchedule"
 import Footer from "components/Footer";
+import InputTime from 'components/InputTime';
 import styles from 'styles/App.module.css';
+
 
 function App() {
   const [modeState, setModeState] = useState('조율 진행중');
@@ -32,6 +34,7 @@ function App() {
   <ArticleIng 
     schedule={schedule}
     modeState={modeState}
+    idMax={idMax}
     onChangeModeState = {function(mode) {
       setModeState(mode);
     }}/>
@@ -58,6 +61,7 @@ function App() {
             <Route path="/signup" element={<SignUp />}></Route>
             <Route path="/addSchedule" element={_addSchedule}></Route>
             <Route path="/mySchedule/ing/:sch_id" element={<MySchedule schedule={schedule}/>}></Route>
+            <Route path="/inputTime" element={<InputTime />}></Route>
           </Routes>
         </section>
         <Footer />
