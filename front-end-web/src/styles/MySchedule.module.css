@@ -97,7 +97,7 @@
 /* ----invite---- */
 
 .invite {
-    margin-top: 30px;
+    margin-top: 70px;
     display: flex;
     flex-direction: column;
 }
@@ -152,15 +152,14 @@
 }
 
 .memberList {
-    width: 570px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    margin-left: 40px;
+    width: 500px;
+    height: 48px;
 }
 
 .member {
-    margin-bottom: 10px;
-    width: 176px;
+    margin: 10px 0 10px 6px;
+    width: 155px;
     height: 48px;
     background-color: white;
     border-radius: 10px;
@@ -171,20 +170,21 @@
 }
 
 .circle {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
     background-color: #DEDEDE;
     border-radius: 50%;
 }
 
 .member_name {
+    margin-bottom: 1px;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 18px;
     color: #3F3F3F;
 }
 
 .btn_delete {
-    margin-top: 5px;
+    margin-top: 2px;
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -197,6 +197,7 @@
 }
 
 .btn_submit {
+    margin-top: 40px;
     width: 216px;
     height: 48px;
     font-family: 'Noto Sans KR', sans-serif;
