@@ -82,64 +82,21 @@ const MySchedule = (props) => {
             </button>
         </div>
     </div>
-        
     );
 
-    // console.log(props.schedule[sch_id].date);
-    // console.log(sch_id);
-    // let _startDate = props.schedule[sch_id].date.startDate;
-    // _startDate = moment().locale('ko').format('MM월 DD일 dddd');
-    // console.log(_startDate);
-    // const [days, setDays] = useState([]);
     let days = [];
     const _startDate = moment(props.schedule[sch_id].date[0].startDate);
     const _endDate = moment(props.schedule[sch_id].date[0].endDate);
     const difference = _endDate.diff(_startDate, 'days');
-    console.log(difference);
-    // console.log(_endDate);
-    // let dats = [];
+    // console.log(difference);
 
-    const hamsu = () => {
-        
-    }
-    // let num = 0;
-    const [num, setNum] = useState(0);
-
-    
-    
     // console.log(days);
     
     // console.log(num);
     
     for (let i = 0; i <= difference; i++) {
-        // let newDate = _startDate.clone().add(i, 'days');
-        // let dd = moment(newDate).locale('ko').format('MM월 DD일 dddd');
-        // let newArr = days.concat(_startDate.clone().add(i, 'days'));
-        // console.log(newArr);
-        // setDays(newArr);
         days.push(_startDate.clone().add(i, 'days'));
-        // console.log(moment(newDate).locale('ko').format('MM월 DD일 dddd'));
-        // console.log(days);
     }
-
-    // if (num === 1) {
-    //     for (let i = 0; i <= difference; i++) {
-    //         // let newDate = _startDate.clone().add(i, 'days');
-    //         // let dd = moment(newDate).locale('ko').format('MM월 DD일 dddd');
-    //         let newArr = days.concat(_startDate.clone().add(i, 'days'));
-    //         console.log(newArr);
-    //         // setDays(newArr);
-    //         days.push(_startDate.clone().add(i, 'days'));
-    //         // console.log(moment(newDate).locale('ko').format('MM월 DD일 dddd'));
-    //         // console.log(days);
-    //     }
-    //     // for (let i = 0; i <= difference; i++) {
-    //     //     dats.push(i);
-    //     // }
-    //     setNum(0);
-    //     console.log(days);
-    // }
-    // console.log(num);
     
     console.log(days);
     const dateList = days.map( (day, index) => 
