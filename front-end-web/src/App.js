@@ -15,9 +15,9 @@ import styles from 'styles/App.module.css';
 
 function App() {
   const [modeState, setModeState] = useState('조율 진행중');
-  const [idMax, setIdMax] = useState(1); // 기본으로 생성해놓은 '동아리 회의' 없애면 다시 0부터 시작하게 수정해야함
+  const [idMax, setIdMax] = useState(0); // 기본으로 생성해놓은 '동아리 회의' 없애면 다시 0부터 시작하게 수정해야함
   const [schedule, setSchedule] = useState([
-    {id:0, title:'동아리 회의', desc:'이번주 동아리 전체 회의날 정하기', color:'teal', date:''}
+    // {id:0, title:'동아리 회의', desc:'이번주 동아리 전체 회의날 정하기', color:'teal', date:''}
   ])
 
   const _addSchedule = 
