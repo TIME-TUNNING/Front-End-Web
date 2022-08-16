@@ -43,12 +43,12 @@
 
 .slide {
     width: 550px;
-    height: 200px;
-    margin-top:  70px;
+    height: 160px;
+    margin-top: 40px;
+    margin-left: 15px;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 18px;
     font-weight: bold;
-    
 }
 
 .dayblock {
@@ -65,16 +65,21 @@
 
 .monthfont {
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     color: #858585;
-    
 }
 
 .dayfont{
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 25px;
+    font-size: 32px;
     color: #4B77F2;
     font-weight: bold;
+}
+
+.weekfont {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    color: #4B77F2;
 }
 
 .tablebox {
@@ -99,15 +104,21 @@
 }
 
 .btn_dayblock {
-    width: 100px;
-    height: 130px;
-    border-radius: 20px;
+    margin-top: 20px;
+    width: 95px;
+    height: 120px;
+    border-radius: 10px;
     text-align: center;
     right: 100px;
     background-color: white;
-    box-shadow: 0 0 18px -15px;
+    box-shadow: 0 0 30px -28px;
     border-color: white;
-    border: 0;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn_allday {
@@ -187,12 +198,14 @@
 }
 
 .member {
-    margin: 10px 0 10px 6px;
+    margin: 10px 6px 10px 6px;
     width: 155px;
     height: 48px;
     background-color: white;
+    /* background-color: #3F3F3F; */
     border-radius: 10px;
-    box-shadow: 0 0 30px -22px black;
+    /* box-shadow: 0 0 30px -28px; */
+    box-shadow: 0 0 18px -15px;
     display: flex;
     justify-content: space-around;
     align-items: center;

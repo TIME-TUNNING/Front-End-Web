@@ -1,8 +1,10 @@
 import { useParams } from 'react-router-dom'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import moment from 'moment';
+import 'moment/locale/ko'
 import delete_img from 'icons/Delete.png';
 import styles from 'styles/MySchedule.module.css';
 
@@ -35,7 +37,7 @@ const MySchedule = (props) => {
         infinite: true,
         speed: 500,
         slidesToShow: 5,
-        slidesToScroll: 5
+        slidesToScroll: 5,
     };
 
     const settings_2 = {
@@ -60,7 +62,7 @@ const MySchedule = (props) => {
     const [inviteId, setInviteId] = useState('');
 
     const handleAddMember = () => {
-        for (let i = 0; i < 6; i++) {
+        for (let i = 0; i < 7; i++) {
             if (inviteId === test_members[i].id) {
                 setMembers(members.concat(test_members[i]))
             }
@@ -80,11 +82,40 @@ const MySchedule = (props) => {
             </button>
         </div>
     </div>
-        
     );
 
-    // console.log(props.schedule[sch_id].id);
-    // console.log(sch_id);
+    let days = [];
+    const _startDate = moment(props.schedule[sch_id].date[0].startDate);
+    const _endDate = moment(props.schedule[sch_id].date[0].endDate);
+    const difference = _endDate.diff(_startDate, 'days');
+    // console.log(difference);
+
+    // console.log(days);
+    
+    // console.log(num);
+    
+    for (let i = 0; i <= difference; i++) {
+        days.push(_startDate.clone().add(i, 'days'));
+    }
+    
+    console.log(days);
+    const dateList = days.map( (day, index) => 
+    <div key={Number(index)}>
+        <div className={styles.dayblock}>
+            <button
+            className={styles.btn_dayblock}                                
+            type='button'>
+                <span className={styles.monthfont}>{moment(day).format('M월')}</span>
+                <span className={styles.dayfont}>{moment(day).format('DD')}</span>
+                <span className={styles.weekfont}>{moment(day).locale('ko').format('dddd')}</span>
+            </button>
+            <button
+            className={styles.btn_allday}
+            type='button'
+            >종일</button>
+        </div>
+    </div>
+    );
     
     return (
         <div className={styles.mySchedule}>
@@ -98,147 +129,7 @@ const MySchedule = (props) => {
                     </div>
                     <div className={styles.slide}>
                         <Slider {...settings_1}>
-                            <div className={styles.dayblock}>
-                                <button
-                                className={styles.btn_dayblock }                                
-                                type='submit'
-                                ><span className={styles.monthfont}>6월</span>
-                                <span className={styles.dayfont}>
-                                    <p>15</p>
-                                    목요일
-                                </span></button>
-                                <button
-                                className={styles.btn_allday}
-                                type='submit'
-                                >종일</button>
-                            </div>
-                            <div className={styles.dayblock}>
-                                <button
-                                className={styles.btn_dayblock}
-                                type='submit'
-                                ><span className={styles.monthfont}>6월</span>
-                                <span className={styles.dayfont}>
-                                    <p>15</p>
-                                    목요일
-                                </span></button>
-                                <button
-                                className={styles.btn_allday}
-                                type='submit'
-                                >종일</button>
-                            </div>
-                            <div className={styles.dayblock}>
-                                <button
-                                className={styles.btn_dayblock}
-                                type='submit'
-                                ><span className={styles.monthfont}>6월</span>
-                                <span className={styles.dayfont}>
-                                    <p>15</p>
-                                    목요일
-                                </span></button>
-                                <button
-                                className={styles.btn_allday}
-                                type='submit'
-                                >종일</button>
-                            </div>
-                            <div className={styles.dayblock}>
-                                <button
-                                className={styles.btn_dayblock}
-                                type='submit'
-                                ><span className={styles.monthfont}>6월</span>
-                                <span className={styles.dayfont}>
-                                    <p>15</p>
-                                    목요일
-                                </span></button>
-                                <button
-                                className={styles.btn_allday}
-                                type='submit'
-                                >종일</button>
-                            </div>
-                            <div className={styles.dayblock}>
-                                <button
-                                className={styles.btn_dayblock}
-                                type='submit'
-                                ><span className={styles.monthfont}>6월</span>
-                                <span className={styles.dayfont}>
-                                    <p>15</p>
-                                    목요일
-                                </span></button>
-                                <button
-                                className={styles.btn_allday}
-                                type='submit'
-                                >종일</button>
-                            </div>
-                            <div className={styles.dayblock}>
-                                <button
-                                className={styles.btn_dayblock}
-                                type='submit'
-                                ><span className={styles.monthfont}>6월</span>
-                                <span className={styles.dayfont}>
-                                    <p>15</p>
-                                    목요일
-                                </span></button>
-                                <button
-                                className={styles.btn_allday}
-                                type='submit'
-                                >종일</button>
-                            </div>
-                            <div className={styles.dayblock}>
-                                <button
-                                className={styles.btn_dayblock}
-                                type='submit'
-                                ><span className={styles.monthfont}>6월</span>
-                                <span className={styles.dayfont}>
-                                    <p>15</p>
-                                    목요일
-                                </span></button>
-                                <button
-                                className={styles.btn_allday}
-                                type='submit'
-                                >종일</button>
-                            </div>
-                            <div className={styles.dayblock}>
-                                <button
-                                className={styles.btn_dayblock}
-                                type='submit'
-                                ><span className={styles.monthfont}>6월</span>
-                                <span className={styles.dayfont}>
-                                    <p>15</p>
-                                    목요일
-                                </span></button>
-                                <button
-                                className={styles.btn_allday}
-                                type='submit'
-                                >종일</button>
-                            </div>
-                            <div className={styles.dayblock}>
-                                <button
-                                className={styles.btn_dayblock}
-                                type='submit'
-                                ><span className={styles.monthfont}>6월</span>
-                                <span className={styles.dayfont}>
-                                    <p>15</p>
-                                    목요일
-                                </span></button>
-                                <button
-                                className={styles.btn_allday}
-                                type='submit'
-                                >종일</button>
-                            </div>
-                            <div className={styles.dayblock}>
-                                <button
-                                className={styles.btn_dayblock}
-                                type='submit'
-                                ><span className={styles.monthfont}>6월</span>
-                                <span className={styles.dayfont}>
-                                    <p>15</p>
-                                    목요일
-                                </span></button>
-                                <button
-                                className={styles.btn_allday}
-                                type='submit'
-                                >종일</button>
-                            </div>
-                            
+                            {dateList}
                         </Slider>
                     </div>
                     <div className={styles.tablebox}></div>
