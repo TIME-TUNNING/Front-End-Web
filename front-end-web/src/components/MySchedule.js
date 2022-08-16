@@ -14,6 +14,20 @@ import styles from 'styles/MySchedule.module.css';
 // };
 
 const MySchedule = (props) => {
+
+    // const [tab, settab] = useState([false, false, false, false, false, false, false]);
+    // const tabSelct = (index) => {
+    //     let newArray = [...tab];
+    //     for (let i = 0 ; i < 8; i++){
+    //         if(i === index){
+    //             newArray[i] = true;
+    //         } else {
+    //             newArray[i] = false;
+    //         }
+    //     }
+    //     settab(newArray);
+    // }
+    
     let { sch_id } = useParams();
 
     const settings_1 = {
@@ -21,7 +35,7 @@ const MySchedule = (props) => {
         infinite: true,
         speed: 500,
         slidesToShow: 5,
-        slidesToScroll: 3
+        slidesToScroll: 5
     };
 
     const settings_2 = {
@@ -85,41 +99,146 @@ const MySchedule = (props) => {
                     <div className={styles.slide}>
                         <Slider {...settings_1}>
                             <div className={styles.dayblock}>
-                                <span>
-                                    <span className={styles.monthfont}>6월</span>
-                                    <span className={styles.dayfont}>
-                                        <p>15</p>
-                                        목요일
-                                    </span>
-                                </span>
+                                <button
+                                className={styles.btn_dayblock }                                
+                                type='submit'
+                                ><span className={styles.monthfont}>6월</span>
+                                <span className={styles.dayfont}>
+                                    <p>15</p>
+                                    목요일
+                                </span></button>
+                                <button
+                                className={styles.btn_allday}
+                                type='submit'
+                                >종일</button>
                             </div>
                             <div className={styles.dayblock}>
-                                <h3>1</h3>
+                                <button
+                                className={styles.btn_dayblock}
+                                type='submit'
+                                ><span className={styles.monthfont}>6월</span>
+                                <span className={styles.dayfont}>
+                                    <p>15</p>
+                                    목요일
+                                </span></button>
+                                <button
+                                className={styles.btn_allday}
+                                type='submit'
+                                >종일</button>
                             </div>
                             <div className={styles.dayblock}>
-                                <h3>1</h3>
+                                <button
+                                className={styles.btn_dayblock}
+                                type='submit'
+                                ><span className={styles.monthfont}>6월</span>
+                                <span className={styles.dayfont}>
+                                    <p>15</p>
+                                    목요일
+                                </span></button>
+                                <button
+                                className={styles.btn_allday}
+                                type='submit'
+                                >종일</button>
                             </div>
                             <div className={styles.dayblock}>
-                                <h3>1</h3>
+                                <button
+                                className={styles.btn_dayblock}
+                                type='submit'
+                                ><span className={styles.monthfont}>6월</span>
+                                <span className={styles.dayfont}>
+                                    <p>15</p>
+                                    목요일
+                                </span></button>
+                                <button
+                                className={styles.btn_allday}
+                                type='submit'
+                                >종일</button>
                             </div>
                             <div className={styles.dayblock}>
-                                <h3>1</h3>
+                                <button
+                                className={styles.btn_dayblock}
+                                type='submit'
+                                ><span className={styles.monthfont}>6월</span>
+                                <span className={styles.dayfont}>
+                                    <p>15</p>
+                                    목요일
+                                </span></button>
+                                <button
+                                className={styles.btn_allday}
+                                type='submit'
+                                >종일</button>
                             </div>
                             <div className={styles.dayblock}>
-                                <h3>1</h3>
+                                <button
+                                className={styles.btn_dayblock}
+                                type='submit'
+                                ><span className={styles.monthfont}>6월</span>
+                                <span className={styles.dayfont}>
+                                    <p>15</p>
+                                    목요일
+                                </span></button>
+                                <button
+                                className={styles.btn_allday}
+                                type='submit'
+                                >종일</button>
                             </div>
                             <div className={styles.dayblock}>
-                                <h3>1</h3>
+                                <button
+                                className={styles.btn_dayblock}
+                                type='submit'
+                                ><span className={styles.monthfont}>6월</span>
+                                <span className={styles.dayfont}>
+                                    <p>15</p>
+                                    목요일
+                                </span></button>
+                                <button
+                                className={styles.btn_allday}
+                                type='submit'
+                                >종일</button>
                             </div>
                             <div className={styles.dayblock}>
-                                <h3>1</h3>
+                                <button
+                                className={styles.btn_dayblock}
+                                type='submit'
+                                ><span className={styles.monthfont}>6월</span>
+                                <span className={styles.dayfont}>
+                                    <p>15</p>
+                                    목요일
+                                </span></button>
+                                <button
+                                className={styles.btn_allday}
+                                type='submit'
+                                >종일</button>
                             </div>
                             <div className={styles.dayblock}>
-                                <h3>1</h3>
+                                <button
+                                className={styles.btn_dayblock}
+                                type='submit'
+                                ><span className={styles.monthfont}>6월</span>
+                                <span className={styles.dayfont}>
+                                    <p>15</p>
+                                    목요일
+                                </span></button>
+                                <button
+                                className={styles.btn_allday}
+                                type='submit'
+                                >종일</button>
                             </div>
                             <div className={styles.dayblock}>
-                                <h3>1</h3>
+                                <button
+                                className={styles.btn_dayblock}
+                                type='submit'
+                                ><span className={styles.monthfont}>6월</span>
+                                <span className={styles.dayfont}>
+                                    <p>15</p>
+                                    목요일
+                                </span></button>
+                                <button
+                                className={styles.btn_allday}
+                                type='submit'
+                                >종일</button>
                             </div>
+                            
                         </Slider>
                     </div>
                     <div className={styles.tablebox}></div>
