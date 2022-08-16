@@ -48,12 +48,14 @@
 }
 
 .vectordiv{
+    position: relative;
+    right: 68   px;
     text-align: end;
     height: 250px;
 }
 
 .frametopdiv{
-    width: 10000px;
+    width: 100px;
     height: auto;
     left: 20px;
     
