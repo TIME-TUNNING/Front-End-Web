@@ -32,9 +32,13 @@ const MySchedule = (props) => {
         
     let { sch_id } = useParams();
 
+    const _startDate = moment(props.schedule[sch_id].date[0].startDate);
+    const _endDate = moment(props.schedule[sch_id].date[0].endDate);
+    const difference = _endDate.diff(_startDate, 'days');
+
     const settings_1 = {
         dots: true,
-        infinite: true,
+        infinite: difference > 5,
         speed: 500,
         slidesToShow: 5,
         slidesToScroll: 5,
@@ -85,22 +89,17 @@ const MySchedule = (props) => {
     );
 
     let days = [];
-    const _startDate = moment(props.schedule[sch_id].date[0].startDate);
-    const _endDate = moment(props.schedule[sch_id].date[0].endDate);
-    const difference = _endDate.diff(_startDate, 'days');
+    
     // console.log(difference);
 
     // console.log(days);
     
     // console.log(num);
     
+    const [isSelected, setIsSelected] = useState([]);
+    let dayArray = [];
     for (let i = 0; i <= difference; i++) {
         days.push(_startDate.clone().add(i, 'days'));
-    }
-
-    const [isSelected, setIsSelected] = useState([]);
-    let dayArray = []
-    for (let i = 0; i <= difference; i++) {
         dayArray.push(false);
     }
     dayArray[0] = false;
