@@ -134,6 +134,18 @@
     
 }
 
+.backgroundChange {
+    background-color: #4B77F2;
+}
+
+.colorWhite {
+    color: white;
+}
+
+.colorGray {
+    color: #DEDEDE;
+}
+
 /* ----invite---- */
 
 .invite {
