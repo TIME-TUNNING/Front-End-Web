@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom'
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -29,7 +29,7 @@ const MySchedule = (props) => {
     //     }
     //     settab(newArray);
     // }
-    
+        
     let { sch_id } = useParams();
 
     const settings_1 = {
@@ -97,17 +97,39 @@ const MySchedule = (props) => {
     for (let i = 0; i <= difference; i++) {
         days.push(_startDate.clone().add(i, 'days'));
     }
+
+    const [isSelected, setIsSelected] = useState([]);
+    let dayArray = []
+    for (let i = 0; i <= difference; i++) {
+        dayArray.push(false);
+    }
+    dayArray[0] = false;
+    // setIsSelected(dayArray);
+
+    const handleSelect = (index) => {
+        for (let i = 0; i <= difference; i++) {
+            if (i === index) {
+                dayArray[i] = true;
+            } else {
+                dayArray[i] = false;
+            }
+        }
+        setIsSelected(dayArray);
+    }
     
-    console.log(days);
+    // console.log(days);
     const dateList = days.map( (day, index) => 
     <div key={Number(index)}>
         <div className={styles.dayblock}>
             <button
-            className={styles.btn_dayblock}                                
-            type='button'>
-                <span className={styles.monthfont}>{moment(day).format('M월')}</span>
-                <span className={styles.dayfont}>{moment(day).format('DD')}</span>
-                <span className={styles.weekfont}>{moment(day).locale('ko').format('dddd')}</span>
+            className={`${styles.btn_dayblock} ${isSelected[index] ? styles.backgroundChange : 'none'}`}                                
+            type='button'
+            onClick={() => {
+                handleSelect(index);
+            }}>
+                <span className={`${styles.monthfont} ${isSelected[index] ? styles.colorGray : 'none'}`}>{moment(day).format('M월')}</span>
+                <span className={`${styles.dayfont} ${isSelected[index] ? styles.colorWhite : 'none'}`}>{moment(day).format('DD')}</span>
+                <span className={`${styles.weekfont} ${isSelected[index] ? styles.colorWhite : 'none'}`}>{moment(day).locale('ko').format('dddd')}</span>
             </button>
             <button
             className={styles.btn_allday}
@@ -116,6 +138,8 @@ const MySchedule = (props) => {
         </div>
     </div>
     );
+
+    
     
     return (
         <div className={styles.mySchedule}>
