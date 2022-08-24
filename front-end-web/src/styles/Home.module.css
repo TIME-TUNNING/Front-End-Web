@@ -1,17 +1,26 @@
 .timetuning{
+    position: relative;
     width: auto;
-    height: 40px;
-    top: 30px;
+    top: 38px;
+    height: 50px;
+    bottom: 10px;
     color: #4B77F2;
-    font-weight: bold;
+    font-size: 20px;
+    font-weight: 1000;
     text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
 
 }
 
 .timeex{
+    position: relative;
+    top: 60px;
     text-align: center;
-    font-size: 40px;
-    font-weight: bold;
+    font-size: 60px;
+    font-weight: 1000;
+    font-weight: bolder;
+    font-family: 'Noto Sans KR', sans-serif;
+
 }
 
 .homediv{
@@ -30,26 +39,28 @@
     width: 330px;
     height: 300px;
     left: -550px;
-    bottom: -3px;
+    top: 118px;
 }
 .Frametop{
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     left: -230px;
-    bottom: 38px;
+    top: 90px;
     /* align-content: flex-end; */
 }
 .Vector{
     position: relative;
-    width: 150px;
-    left: 570px;
+    width: 200px;
+    left: 670px;
+    bottom: 80px;
     background-color: transparent;
+    z-index: -1;
 }
 
 .vectordiv{
     position: relative;
-    right: 119px;
+    right: 110px;
     text-align: end;
     height: 250px;
 }
@@ -63,7 +74,139 @@
 
 .framediv{
     width: auto;
-    height: auto;
+    height: 420px;
     left: 200px;
     
+}
+
+
+.maindiv{
+    width: 100%;
+    height: 500px;
+
+}
+
+/* 2page */
+.two{
+    height: 830px;
+}
+
+.logoFrame{
+    position: relative;
+    z-index: -1;
+    bottom: 140px;
+    right: 540px;
+}
+
+.logocircle{
+    position: relative;
+    bottom: 300px;
+    width: 250px;
+    height: 250px;
+    left: 1100px;
+    z-index: -1;
+}
+
+.twomain{
+    position: relative;
+    bottom: 240px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 2page text*/
+/* .text{
+    position: relative;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Noto Sans KR', sans-serif;
+    bottom: 200px;
+}
+
+.clockbox{
+    text-align: center;
+    width: 500px;
+    margin-right: -100px;
+}
+
+.box{
+    position: relative;
+    box-shadow: 0 0 15px -12px black;
+    border-radius: 20px;
+}
+
+.clock{
+    position: relative;
+    background-color: transparent;
+    bottom: 360px;
+    right: 130px;
+}
+
+.circlehandle{
+    position: relative;
+    right: 43px;
+    bottom: 20px;
+}
+
+.timesaving{
+    position: relative;
+    bottom: 320px;
+    font-size: 30px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.timesaving2{
+    position: relative;
+    color: #858585;
+    font-weight: bolder;
+    font-size: 18px;
+    bottom: 290px;
+} */
+
+
+/* 3page */
+
+.logocircle3{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    z-index: -1;
+    right: 560px;
+    bottom: 90px;
+}
+
+.threemain{
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    bottom: 50px;
+}
+
+.logoimgdiv{
+    height: 220px;
+}
+
+.logoimg{
+    position: relative;
+    width: 350px;
+    left: 1100px;
+    bottom: 170px;
+    z-index: -1;
+}
+
+
+/* 4page */
+
+.fourmain{
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    bottom: 50px;
+}
+
+.logo{
+    position: relative;
+    z-index: -1;
+    width: 370px;
+    left: 800px;
 }
