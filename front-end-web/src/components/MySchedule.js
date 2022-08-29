@@ -155,6 +155,22 @@ const MySchedule = (props) => {
                             {dateList}
                         </Slider>
                     </div>
+                    <div className={styles.dateTime}>
+                        <div className={styles.timeInputs}>
+                            <input 
+                            className={styles.input}
+                            type='time'/>
+                            <span className={styles.span}>~</span>
+                            <input 
+                            className={styles.input}
+                            type='time'/>
+                        </div>
+                        <div className={styles.timeBtn}>
+                            <button
+                            className={styles.button}
+                            >입력</button>
+                        </div>
+                    </div>
                     <div className={styles.tablebox}></div>
                     <div className={styles.time}>
                         <span>00:00 03:00 06:00 09:00 12:00 15:00 18:00 21:00 24:00</span>
