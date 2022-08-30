@@ -54,7 +54,7 @@ const MySchedule = (props) => {
 
     const test_members = [
         {key: 0, name: '손민지', id: 'smj1234'},
-        {key: 1, name: '박채연', id: 'bjy1234'},
+        {key: 1, name: '박채연', id: 'bcy1234'},
         {key: 2, name: '성민혁', id: 'smh1234'},
         {key: 3, name: '임주영', id: 'ijy1234'},
         {key: 4, name: '심주현', id: 'sjh1234'},
@@ -115,6 +115,14 @@ const MySchedule = (props) => {
         }
         setIsSelected(dayArray);
     }
+
+    const [startTime, setStartTime] = useState();
+    const [endTime, setEndTime] = useState();
+    const [date, setDate] = useState();
+    let dateTime = [];
+    const handleTime = (day, start, end) => {
+        dateTime.push({day, start, end});
+    }
     
     // console.log(days);
     const dateList = days.map( (day, index) => 
@@ -123,8 +131,9 @@ const MySchedule = (props) => {
             <button
             className={`${styles.btn_dayblock} ${isSelected[index] ? styles.backgroundChange : 'none'}`}                                
             type='button'
-            onClick={() => {
+            onClick={(e) => {
                 handleSelect(index);
+                setDate(day);
             }}>
                 <span className={`${styles.monthfont} ${isSelected[index] ? styles.colorGray : 'none'}`}>{moment(day).format('M월')}</span>
                 <span className={`${styles.dayfont} ${isSelected[index] ? styles.colorWhite : 'none'}`}>{moment(day).format('DD')}</span>
@@ -138,8 +147,6 @@ const MySchedule = (props) => {
     </div>
     );
 
-    
-    
     return (
         <div className={styles.mySchedule}>
             <div className={styles.box}>
@@ -154,6 +161,32 @@ const MySchedule = (props) => {
                         <Slider {...settings_1}>
                             {dateList}
                         </Slider>
+                    </div>
+                    <div className={styles.dateTime}>
+                        <div className={styles.timeInputs}>
+                            <input 
+                            className={styles.input}
+                            onChange = { (e) => {
+                                setStartTime(e.target.value);
+                            }}
+                            type='time'/>
+                            <span className={styles.span}>~</span>
+                            <input 
+                            className={styles.input}
+                            onChange = { (e) => {
+                                setEndTime(e.target.value);
+                            }}
+                            type='time'/>
+                        </div>
+                        <div className={styles.timeBtn}>
+                            <button
+                            className={styles.button}
+                            onClick = { () => {
+                                handleTime(date, startTime, endTime);
+                                console.log(dateTime);
+                            }}
+                            >입력</button>
+                        </div>
                     </div>
                     <div className={styles.tablebox}></div>
                     <div className={styles.time}>
