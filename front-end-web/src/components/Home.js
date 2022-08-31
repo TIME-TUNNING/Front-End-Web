@@ -20,8 +20,12 @@ import "slick-carousel/slick/slick-theme.css";
 function Home(props) {
     const StyledSlider = styled(Slider)`
         .slick-list {
-            width: auto;
+            position: relative;
+            right: 455px;
+            width: 1900px;
             margin: 0 auto;
+            height: auto;
+
         }
         
         .slick-dots {
