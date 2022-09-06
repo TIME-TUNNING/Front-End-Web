@@ -4,6 +4,7 @@ import styles from 'styles/SignUp.module.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import axios from 'axios';
 
 function SignUp(props) {
     const [id, setId] = useState("");
@@ -23,7 +24,13 @@ function SignUp(props) {
         className={styles.btn_completed}
         type='submit'
         onClick = { (e) => {
-            // props.onAlertErrorMessage();
+            axios.post('http://3.36.127.121:3000/users', {
+                // userIdx: 1,
+                userId: {id},
+                userName: {name},
+                password: {password}
+            });
+            console.log('api 회원가입');
         }}
         >가입 완료</button>
     </Link>
