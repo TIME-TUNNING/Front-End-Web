@@ -53,8 +53,8 @@ function App() {
         <Header />
         <section className={styles.main_body}>
           <Routes>
+            {/* <Route path="/" element={<Home />}></Route> */}
             <Route path="/" element={<Home />}></Route>
-            <Route path="/introduction" element=""></Route>
             <Route path="/mySchedule/ing" element={_articleIng}></Route>
             <Route path="/mySchedule/end" element={_articleEnd}></Route>
             <Route path="/login" element={<Login />}></Route>

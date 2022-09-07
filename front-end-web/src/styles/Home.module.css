@@ -52,7 +52,7 @@
 .Vector{
     position: relative;
     width: 200px;
-    left: 670px;
+    left: 1830px;
     bottom: 80px;
     background-color: transparent;
     z-index: -1;
@@ -66,16 +66,20 @@
 }
 
 .frametopdiv{
+    position: relative;
     width: 100px;
     height: auto;
-    left: 20px;
+    top: 30px;
+    left: 550px;
     
 }
 
 .framediv{
+    position: relative;
     width: auto;
     height: 420px;
-    left: 200px;
+    top: 30px;
+    left: 580px;
     
 }
 
@@ -95,15 +99,15 @@
     position: relative;
     z-index: -1;
     bottom: 140px;
-    right: 540px;
+    right: 30px;
 }
 
 .logocircle{
     position: relative;
-    bottom: 300px;
+    bottom: 170px;
     width: 250px;
     height: 250px;
-    left: 1100px;
+    left: 1600px;
     z-index: -1;
 }
 
@@ -111,6 +115,7 @@
     position: relative;
     bottom: 240px;
     max-width: 100%;
+    left: 450px;
     height: auto;
 }
 
@@ -171,7 +176,7 @@
     width: 300px;
     height: 300px;
     z-index: -1;
-    right: 560px;
+    right: 70px;
     bottom: 90px;
 }
 
@@ -180,6 +185,7 @@
     max-width: 100%;
     height: auto;
     bottom: 50px;
+    left: 240px;
 }
 
 .logoimgdiv{
@@ -189,7 +195,7 @@
 .logoimg{
     position: relative;
     width: 350px;
-    left: 1100px;
+    left: 1530px;
     bottom: 170px;
     z-index: -1;
 }
@@ -202,11 +208,28 @@
     max-width: 100%;
     height: auto;
     bottom: 50px;
+    left: 260px;
 }
 
 .logo{
     position: relative;
     z-index: -1;
     width: 370px;
-    left: 800px;
+    left: 1460px;
+}
+
+
+.div{
+    position: relative;
+    right: 470px;
+    width: 1905px;
+}
+
+.logocircle4{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    z-index: -1;
+    right: 100px;
+    bottom: 90px;
 }
