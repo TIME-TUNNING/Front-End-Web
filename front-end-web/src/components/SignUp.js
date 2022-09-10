@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from 'styles/SignUp.module.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,10 +7,31 @@ import { faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import axios from 'axios';
 
 function SignUp(props) {
+    // useEffect(() => {
+    //     axios.get('http://3.36.127.121:3000/users')
+    //     .then(res => console.log(res))
+    //     .catch()
+    // },
+    // [])
+
     const [id, setId] = useState("");
     const [name, setName] = useState("");
     const [password, setPassword] = useState("");
     const [pwCheck, setPwCheck] = useState("");
+
+    // async function getSignUp() {
+    //     try {
+    //         const response = await axios.post('http://3.36.127.121:3000/users', {
+    //             userId: {id},
+    //             userName: {name},
+    //             password: {password}
+    //         });
+    //         console.log('response');
+    //         // return response.data;
+    //     } catch (error) {
+    //         console.error(error);
+    //     }
+    // }
 
     let _btn = 
     <button
@@ -23,13 +44,8 @@ function SignUp(props) {
         <button
         className={styles.btn_completed}
         type='submit'
-        onClick = { (e) => {
-            axios.post('http://3.36.127.121:3000/users', {
-                // userIdx: 1,
-                userId: {id},
-                userName: {name},
-                password: {password}
-            });
+        onClick = { () => {
+            // getSignUp();
             console.log('api 회원가입');
         }}
         >가입 완료</button>
