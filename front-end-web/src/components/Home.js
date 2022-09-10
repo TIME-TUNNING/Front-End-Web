@@ -20,9 +20,9 @@ import "slick-carousel/slick/slick-theme.css";
 function Home(props) {
     const StyledSlider = styled(Slider)`
         .slick-list {
-            position: relative;
-            right: 455px;
-            width: 1900px;
+            // position: relative;
+            // right: 455px;
+            width: 100%;
             margin: 0 auto;
             height: auto;
 
@@ -48,7 +48,7 @@ function Home(props) {
         dots: true,
         infinite: true,
         fade: true,
-        autoplay: true,
+        // autoplay: true,
         prevArrow: false,
         speed: 500,
         slidesToShow: 1,
@@ -64,59 +64,62 @@ function Home(props) {
     }
 
     return (
-    <StyledSlider {...setting}>
-        {/* 1page */}
-        <div className={styles.maindiv}>
-            <div className={styles.vectordiv}>
-                <img className={styles.Vector} src={Vector} alt='img1'/>
-            </div>
-            <div className={styles.homediv}>
-                <span className={styles.timetuning}>
-                    타임튜닝이란?
-                </span>
-                <span className={styles.timeex}>
-                    팀원들과 함께하는<br></br>  
-                    가장 효율적인 일정 관리
-                </span>
-            </div> 
-            <div className={styles.frametopdiv}>
-                <img className={styles.Frametop} src={Frametop} alt='img2'/>
-            </div>
-            <div className={styles.framediv}>
-                <img className={styles.Frame} src={Frame} alt='img3'/>
-            </div>
+        <div className={styles.div}>
+            <StyledSlider {...setting}>
+                {/* 1page */}
+                <div className={styles.maindiv}>
+                    <div className={styles.vectordiv}>
+                        <img className={styles.Vector} src={Vector} alt='img1'/>
+                    </div>
+                    <div className={styles.homediv}>
+                        <span className={styles.timetuning}>
+                            타임튜닝이란?
+                        </span>
+                        <span className={styles.timeex}>
+                            팀원들과 함께하는<br></br>  
+                            가장 효율적인 일정 관리
+                        </span>
+                    </div> 
+                    <div className={styles.frametopdiv}>
+                        <img className={styles.Frametop} src={Frametop} alt='img2'/>
+                    </div>
+                    <div className={styles.framediv}>
+                        <img className={styles.Frame} src={Frame} alt='img3'/>
+                    </div>
+                </div>
+                {/* 2page */}
+                <div className={styles.two}>
+                    <div>
+                        <img className={styles.logoFrame} src={logoFrame} alt='img1'/>
+                    </div>    
+                    <img className={styles.twomain} src={twopage} alt='img1'/>
+                    <div>
+                        <img className={styles.logocircle} src={Frametop} alt='img1'/>
+                    </div>
+                </div>
+                {/* 3page */}
+                <div>
+                    <div>
+                        <img className={styles.logocircle3} src={Frametop} alt='img1'/>
+                    </div>
+                    <img className={styles.threemain} src={threepage} alt='img1'/>
+                    <div className={styles.logoimgdiv}>
+                        <img className={styles.logoimg} src={logoimg} alt='img1'/>
+                    </div>
+                </div>
+                {/* 4page */}
+                <div>
+                    <div className={styles.logoimgdiv}>
+                        <img className={styles.logo} src={logo} alt='img1'/>
+                    </div>
+                    <img className={styles.fourmain} src={fourpage} alt='img1'/>
+                    <div>
+                        <img className={styles.logocircle4} src={Frametop} alt='img1'/>
+                    </div>
+                </div>
+            </StyledSlider>
         </div>
-        {/* 2page */}
-        <div className={styles.two}>
-            <div>
-                <img className={styles.logoFrame} src={logoFrame} alt='img1'/>
-            </div>    
-            <img className={styles.twomain} src={twopage} alt='img1'/>
-            <div>
-                <img className={styles.logocircle} src={Frametop} alt='img1'/>
-            </div>
-        </div>
-        {/* 3page */}
-        <div>
-            <div>
-                <img className={styles.logocircle3} src={Frametop} alt='img1'/>
-            </div>
-            <img className={styles.threemain} src={threepage} alt='img1'/>
-            <div className={styles.logoimgdiv}>
-                <img className={styles.logoimg} src={logoimg} alt='img1'/>
-            </div>
-        </div>
-        {/* 4page */}
-        <div>
-            <div className={styles.logoimgdiv}>
-                <img className={styles.logo} src={logo} alt='img1'/>
-            </div>
-            <img className={styles.fourmain} src={fourpage} alt='img1'/>
-            <div>
-                <img className={styles.logocircle3} src={Frametop} alt='img1'/>
-            </div>
-        </div>
-    </StyledSlider>
+
     
 
 
